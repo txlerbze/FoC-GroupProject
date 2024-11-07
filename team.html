@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Fundamentals of Computing</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #f4f4f9;
+            background-color: #1e1e1e;
+            margin: 0;
+        }
+
+        /* Updated Navbar Styles */
+        .navbar {
+            background-color: #222;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar:hover {
+            background-color: #444;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            color: #f4f4f9;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand img {
+            height: 40px; /* Logo height */
+            margin-right: 10px;
+        }
+
+        .navbar-brand:hover {
+            color: #ffcc00;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+        }
+
+        .navbar-nav a {
+            color: #f4f4f9;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .navbar-nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+            letter-spacing: 1px;
+        }
+
+        /* General Container */
+        .container {
+            padding: 60px 80px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f4f4f9;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 220px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .team-member img {
+            width: 150px;  
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            margin-bottom: 5px;
+            color: #f4f4f9;
+        }
+
+        .team-member p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        /* Quote Styling */
+        .team-member .quote {
+            font-style: italic;
+            color: #ccc;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Information */
+        .team-member .contact-info {
+            font-size: 18px;
+            color: #ffcc00; /* Original color for emails */
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .team-member .contact-info:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional styling specifically for "View Resume" and "Individual Project" links */
+        .links a {
+            font-size: 18px;
+            color: #3498db; /* New color for the links */
+            text-decoration: none;
+            margin-right: 10px; /* Space between links */
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #f4f4f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo"> Fundamentals of Computing
+        </a>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gates.html">Logic Gate Simulator</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="concepts.html">Concepts</a></li>
+            <li><a href="databases.html">Databases</a></li>
+            <li><a href="doc.html">Documentation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Team Section -->
+    <section class="container">
+        <h2>Meet The Developer Team</h2>
+        <div class="team">
+
+            <!-- Tyler Montejo -->
+            <div class="team-member">
+                <img src="member4.jpg" alt="Tyler Montejo">
+                <h3>Tyler Montejo</h3>
+                <p>Role: Web Designer</p>
+                <p class="quote">"Ensuring quality through rigorous testing."</p>
+                <a href="mailto:tylermontejo52@gmail.com" class="contact-info">tylermontejo52@gmail.com</a>
+                <div class="links">
+                    <a href="https://txlerbze.github.io/resume/">View Resume</a> | 
+                    <a href="https://txlerbze.github.io/individual-Project/">Individual Project</a>
+                </div>
+            </div>
+
+            <!-- Elvis Flores -->
+            <div class="team-member">
+                <img src="member1.jpg" alt="Elvis Flores">
+                <h3>Elvis Flores</h3>
+                <p>Role: Project Manager</p>
+                <p class="quote">"Leading the way with innovation and teamwork."</p>
+                <a href="mailto:elvisflores956@gmail.com" class="contact-info">elvisflores956@gmail.com</a>
+                <div class="links">
+                    <a href="elvis_resume.pdf">View Resume</a> | 
+                    <a href="elvis_project.html">Individual Project</a>
+                </div>
+            </div>
+
+            <!-- Chris Baki -->
+            <div class="team-member">
+                <img src="member2.png" alt="Chris Baki">
+                <h3>Christian Baki</h3>
+                <p>Role: Researcher</p>
+                <p class="quote">"Building the future, one line of code at a time."</p>
+                <a href="mailto:Bakichris992@gmail.com" class="contact-info">Bakichris992@gmail.com</a>
+                <div class="links">
+                    <a href="chris_resume.pdf">View Resume</a> | 
+                    <a href="chris_project.html">Individual Project</a>
+                </div>
+            </div>
+
+            <!-- Jaleel Middleton -->
+            <div class="team-member">
+                <img src="member3.jpg" alt="Jaleel Middleton">
+                <h3>Jaleel Middleton</h3>
+                <p>Role: Information Gatherer</p>
+                <p class="quote">"Creating designs that inspire and engage."</p>
+                <a href="mailto:jjmiddleton2007@gmail.com" class="contact-info">jjmiddleton2007@gmail.com</a>
+                <div class="links">
+                    <a href="jaleel_resume.pdf">View Resume</a> | 
+                    <a href="jaleel_project.html">Individual Project</a>
+                </div>
+            </div>
+
+            <!-- Javier Coyoc -->
+            <div class="team-member">
+                <img src="member5.jpg" alt="Javier Coyoc">
+                <h3>Javier Coyoc</h3>
+                <p>Role: Information Gatherer</p>
+                <p class="quote">"Exploring new ways to present information."</p>
+                <a href="mailto:javiercoyoc01@gmail.com" class="contact-info">javiercoyoc01@gmail.com</a>
+                <div class="links">
+                    <a href="javier_resume.pdf">View Resume</a> | 
+                    <a href="javier_project.html">Individual Project</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fundamentals of Computing Team. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

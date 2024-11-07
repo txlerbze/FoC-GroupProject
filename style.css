@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CCCCFF; /* Light gray background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h2 {
+    margin: 0;
+    font-size: 2em; /* Increase header size for prominence */
+}
+
+nav {
+    margin-bottom: 1.5rem; /* Spacing below navigation */
+}
+
+.nav-link {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+footer {
+    font-size: 0.9em;
+    color: #6c757d; /* Gray color for footer text */
+    padding: 1rem 0; /* Add padding for better spacing */
+}
+
+article {
+    text-align: center; /* Center align article content */
+    padding: 1rem; /* Add padding around the article */
+}
+
+article p {
+    line-height: 1.6; /* Better readability */
+    margin: 1rem 0; /* Add vertical spacing */
+    padding: 0 20px; /* Add side padding */
+}
+
+ul.list-unstyled {
+    padding-left: 0; /* Remove default padding */
+}
