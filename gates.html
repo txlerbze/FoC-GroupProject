@@ -51,7 +51,7 @@
         }
 
         .navbar-brand img {
-            height: 40px; /* Set the height of the logo */
+            height: 40px;
             margin-right: 10px;
         }
 
@@ -63,9 +63,12 @@
             list-style: none;
             padding: 0;
             display: flex;
-            justify-content: center;
             gap: 15px;
             margin: 0;
+        }
+
+        .navbar-nav li {
+            display: inline;
         }
 
         .navbar-nav a {
@@ -146,6 +149,18 @@
 
         footer p {
             margin: 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -192,6 +207,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Fundamentals of Computing. All rights reserved.</p>
+        <a href="contact.html">Contact Us</a>
     </footer>
 </body>
 </html>
