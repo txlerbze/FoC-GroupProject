@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Image Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            width: 80px;
+            height: 40px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        img {
+            width: 100px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+    <h2>What Can JavaScript Do?</h2>
 
-<p>JavaScript can change HTML attribute values.</p>
+    <p>JavaScript can change HTML attribute values.</p>
+    <p>In this case, JavaScript changes the value of the <code>src</code> attribute of an image.</p>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <button onclick="document.getElementById('myImage').src='noton2.png'">On</button>
+    <button onclick="document.getElementById('myImage').src='notoff2.png'">Off</button>
+    
+    <img id="myImage" src="notoff2.png" alt="Switchable Image">
 
-<button onclick="document.getElementById('myImage').src='noton2.png'">On</button>
-
-
-
-<button onclick="document.getElementById('myImage').src='notoff2.png'">Off</button>
-<img id="myImage" src="notoff2.png" style="width:100px">
 </body>
 </html>
