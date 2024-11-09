@@ -66,10 +66,9 @@
         .navbar-toggler-icon {
             background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28244,%20244,%20249%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
         }
-        
+
         /* Hero Section */
         .hero {
-            background: url('background.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -79,7 +78,25 @@
             padding: 20px;
             opacity: 0;
             animation: fadeIn 1.5s forwards;
-            transition: background 1s ease-in-out;
+            background: url('background.jpg') no-repeat center center/cover;
+            background-size: cover;
+            animation: backgroundChange 20s infinite ease-in-out;
+        }
+
+        /* Keyframes for Background Image Rotation */
+        @keyframes backgroundChange {
+            0% {
+                background-image: url('background.jpg');
+            }
+            33% {
+                background-image: url('background2.jpg');
+            }
+            66% {
+                background-image: url('background3.jpg');
+            }
+            100% {
+                background-image: url('background4.jpg');
+            }
         }
 
         @keyframes fadeIn {
