@@ -1,59 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>FoC</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  float: left;
- padding-right: 40px; 
- padding-left: 40px;
- padding-bottom: 40px;
- 
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            float: left;
+            padding: 20px;
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        input[type="number"] {
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #34495e;
+            padding: 10px;
+        }
+        a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
 
-<section>
-<h2>Project 1: Binary to Hexidecimal</h2>
-<hr>	
+    <section class="container">
+        <h2>Project 1: Binary to Hexadecimal</h2>
+        <hr>    
+        <img src="bintohex.jpg" alt="Binary to Hexadecimal">
+        <p>Enter any 4-digit binary number:</p>
+        <input type="number" id="inputBin" value="">
+        <button onclick="binToHex()">Submit</button>
+        <p>Hexadecimal Value:</p>
+        <p id="demo"></p>
+    </section>
 
+    <a href="index.html">Back to Home</a>
 
-<p><img src="bintohex.jpg"></p>
-        
-			
-         
-<input type="number" id="inputBin" value="">
+    <footer>
+        <p>&copy; Powered by UB</p>
+    </footer>
 
-<p>Enter any 4 digit binary number:</p>
-
-<button onclick="binToHex()">Submit</button>
-
-<p>Hexidecimal Value : </p>
-<p id="demo"></p>
-
-<script>
-function binToHex() {
-  var x = document.getElementById("inputBin").value;
-  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
-  document.getElementById("demo").innerHTML = hexOut;
-  }
-</script>
-
-
-
-</section>
-
-
-<a href="index.html">Back to Home</a></h3>
-
-<footer>
-  <p>@ Powered by UB</p>
-</footer>
+    <script>
+        function binToHex() {
+            var x = document.getElementById("inputBin").value;
+            var hexOut = parseInt(x, 2).toString(16).toUpperCase();
+            document.getElementById("demo").innerHTML = hexOut;
+        }
+    </script>
 
 </body>
 </html>
