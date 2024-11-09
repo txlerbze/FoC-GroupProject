@@ -1,54 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ML</title>
-	<style>
-img {
-  float: right;
-}
-.button {
-  background-color: #008CBA; /* Blue */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Machine Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            float: right;
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
 
+    <h3>A Simple Interactive Machine Language</h3>
 
-<h3>A Simple Interactive Machine Language</h3>
+    <p>
+        <img id="MLinstrucitons" src="MLblank.png" alt="Machine Language Instructions">
+        
+        <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML1.png'; document.getElementById('Englishinstrucitons').src='EI1.png'">156C</button>
+        <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML2.png'; document.getElementById('Englishinstrucitons').src='EI2.png'">166D</button>
+        <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML3.png'; document.getElementById('Englishinstrucitons').src='EI3.png'">5056</button>
+        <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML4.png'; document.getElementById('Englishinstrucitons').src='EI4.png'">306E</button>
+        <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML5.png'; document.getElementById('Englishinstrucitons').src='EI5.png'">C000</button>
+        
+        <img id="Englishinstrucitons" src="" alt="English Instructions">
+    </p>
 
-<p>
-
-<img id="MLinstrucitons" src="MLblank.png" >
-
-
-<button class="button" onclick="document.getElementById('MLinstrucitons').src='ML1.png'; document.getElementById('Englishinstrucitons').src='EI1.png'">156C</button><br>
-<button class="button" onclick="document.getElementById('MLinstrucitons').src='ML2.png'; document.getElementById('Englishinstrucitons').src='EI2.png'">166D</button><br>
-<button class="button" onclick="document.getElementById('MLinstrucitons').src='ML3.png'; document.getElementById('Englishinstrucitons').src='EI3.png'">5056</button><br>
-<button class="button" onclick="document.getElementById('MLinstrucitons').src='ML4.png'; document.getElementById('Englishinstrucitons').src='EI4.png'">306E</button><br>
-<button class="button" onclick="document.getElementById('MLinstrucitons').src='ML5.png'; document.getElementById('Englishinstrucitons').src='EI5.png'">C000</button><br>
-<img id="Englishinstrucitons" src="" >
-
-
-
-
-
-<a href="index.html">Back to Home</a></h3>
-
-</p>
-
-
-
-
-
+    <a href="index.html">Back to Home</a>
 
 </body>
 </html>
