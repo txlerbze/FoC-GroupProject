@@ -9,53 +9,109 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #2980b9;
+            color: white;
             text-align: center;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
+
+        section {
+            flex: 1;
+        }
+
         .row {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
         }
+
         .column {
             flex: 1;
-            padding: 20px;
+            min-width: 300px;
+            max-width: 500px;
+            padding: 25px;
             margin: 10px;
-            border-radius: 5px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
+
         .column h2 {
             margin-bottom: 20px;
+            color: white;
+            font-size: 1.8em;
         }
+
         button {
-            width: 100px;
-            height: 40px;
+            width: 120px;
+            height: 45px;
             margin: 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             background-color: #3498db;
             color: white;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         button:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
+            background-color: #2c3e50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
-        footer {
-            margin-top: 40px;
-            padding: 10px;
-            background-color: #222;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+            text-decoration: none;
             color: white;
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
+
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            border-radius: 10px;
         }
-        a:hover {
-            text-decoration: underline;
+
+        h2 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        hr {
+            border-color: rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -65,35 +121,24 @@
     <h2>Project 1: NOT Gate</h2>
 
     <div class="row">
-        <div class="column" style="background-color:#aaa;">
+        <div class="column">
             <h2>Input</h2>
             <button onclick="document.getElementById('belizeImage').src='noton2.png'">ON</button>
             <button onclick="document.getElementById('belizeImage').src='notoff2.png'">OFF</button>
         </div>
-        <div class="column" style="background-color:#bbb;">
+        <div class="column">
             <h2>Output</h2>
             <hr>
-            <img id="belizeImage" src="noton2.png" alt="noton" width="400" height="86">
+            <img id="belizeImage" src="noton2.png" alt="noton">
         </div>
     </div>
 
-    <a href="index.html">Back to Home</a>
+    <a href="gates.html">Back to Gates</a>
 </section>
 
 <footer>
     <p>&copy; Powered by UB</p>
 </footer>
-
-<script>
-    function inOrder(root) { 
-       root.left && inOrder(root.left) 
-       console.log(root.val) 
-       root.right && inOrder(root.right) 
-    } 
-
-    // Example function call
-    // node.inOrder(node) // 13, 15, 18, 20, 25, 30
-</script>
 
 </body>
 </html>
